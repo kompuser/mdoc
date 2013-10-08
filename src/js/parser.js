@@ -1,4 +1,3 @@
-
 var showdown = require('./lib/showdown');
 
 var _headingLevel;
@@ -103,7 +102,7 @@ function parseContent(mdown, toc){
     var tocIndex = mdown.search( new RegExp('^'+ getHeaderHashes() +'[^#]+', 'm') ), //first header
         pre = mdown.substring(0, tocIndex),
         post = mdown.substring(tocIndex),
-        tocContent = getHeaderHashes() +' Table of Contents <a href="#toc" name="toc" class="deep-link">#</a>\n\n';
+        tocContent = getHeaderHashes() +' Table des matières <a href="#toc" name="toc" class="deep-link">#</a>\n\n';
 
     toc.forEach(function(val, i){
         tocContent += ' - ['+ val.name +'](#'+ val.href +')\n';
